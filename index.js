@@ -1,10 +1,4 @@
-const greetings = [
-  'howdy',
-  'hi',
-  'sup',
-  'shalom',
-  'yoooooooooo'
-];
+import greetings from './greetings.js'
 
 function random (range) {
   return Math.floor(Math.random() * range);
