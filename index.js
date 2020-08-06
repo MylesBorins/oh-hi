@@ -11,7 +11,7 @@ function random (range) {
 }
 
 function greet () {
-  console.log(greetings[random(greetings.length)]);
+  return greetings[random(greetings.length)];
 }
 
 export {

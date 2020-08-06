@@ -5,8 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node test.js"
+    "test": "npm run lint && node test.js",
+    "lint": "eslint *.js"
   },
   "author": "Myles Borins <mylesborins@github.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.6.0"
+  }
 }
