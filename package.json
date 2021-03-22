@@ -2,7 +2,7 @@
   "name": "oh-hi",
   "version": "1.0.4",
   "description": "Sup",
-  "repository": "https://github.com/mylesborins/oh-hi",
+  "repository": "https://github.com/MylesBorins/oh-hi",
   "main": "index.js",
   "type": "module",
   "scripts": {
