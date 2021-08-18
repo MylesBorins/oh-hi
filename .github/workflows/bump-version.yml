@@ -41,4 +41,4 @@ jobs:
           });
           return {title, body};
     - name: Print output
-      run: echo "${{steps.get-release-notes.outputs.result}}"
+      run: echo "${{steps.get-release-notes.outputs.result.body}}"
