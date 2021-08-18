@@ -39,10 +39,8 @@ jobs:
           const { data: {title, body} } = await github.request(`GET /repos/${{ github.repository }}/release-notes`, {
             tag_name: "${{ github.event.inputs.version }}"
           });
-          await github.request(`POST /repos/${{ github.repository }}/releases`, {
-            tag_name: "${{ github.event.inputs.version }}"
+          await github.request(, {
+            tag_name: "${{ github.event.inputs.version }}",
             name: title,
             body: body
           });
-          
-          
