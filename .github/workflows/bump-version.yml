@@ -42,7 +42,7 @@ jobs:
           await github.request(`POST /repos/${{ github.repository }}/releases`, {
             tag_name: "${{ github.event.inputs.version }}"
             name: title,
-            body
+            body: body
           });
           
           
