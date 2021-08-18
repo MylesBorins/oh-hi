@@ -38,4 +38,5 @@ jobs:
           const { data: {title, body} } = await github.request(`GET /repos/${{ github.repository }}/release-notes`, {
             tag_name: "${{ github.event.inputs.version }}"
           });
-          console.log(notes);
+          console.log(title);
+          console.log(body);
