@@ -36,5 +36,5 @@ jobs:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
           github.request(`GET /repos/${{ github.repository }}/release-notes`, {
-            tag_name: ${{ github.event.inputs.version }}
+            tag_name: "${{ github.event.inputs.version }}"
           });
