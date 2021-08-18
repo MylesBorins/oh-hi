@@ -39,6 +39,6 @@ jobs:
           const { data: {title, body} } = await github.request(`GET /repos/${{ github.repository }}/release-notes`, {
             tag_name: "${{ github.event.inputs.version }}"
           });
-          return {title, body};
+          return body;
     - name: Print output
-      run: echo "${{steps.get-release-notes.outputs.result.body}}"
+      run: echo "${{steps.get-release-notes.outputs.result}}"
