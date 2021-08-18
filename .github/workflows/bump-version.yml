@@ -31,6 +31,7 @@ jobs:
       run: echo "Hello ${{ github.event.inputs.version }}"
     # Get Release data
     - name: Get Release Notes
+      id: get-release-notes
       uses: actions/github-script@v4.0.2
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
@@ -38,5 +39,6 @@ jobs:
           const { data: {title, body} } = await github.request(`GET /repos/${{ github.repository }}/release-notes`, {
             tag_name: "${{ github.event.inputs.version }}"
           });
-          console.log(title);
-          console.log(body);
+          return {title, body};
+    - name: Print output
+      run: echo "${{steps.get-release-notes.outputs.result}}"
