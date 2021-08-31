@@ -1,5 +1,5 @@
 # Oh-hi
-> Sup?
+> Sup? Hi.
 
 ## What is this?
 
